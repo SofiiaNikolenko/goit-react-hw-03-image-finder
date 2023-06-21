@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import css from './Searchbar.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BiSearchAlt } from 'react-icons/bi';
 
 class Searchbar extends Component {
   state = {
@@ -41,7 +42,7 @@ class Searchbar extends Component {
       <header className={css.Searchbar} onSubmit={this.handleSubmit}>
         <form className={css.SearchForm}>
           <button type="submit" className={css.SearchFormButton}>
-            <span className={css.SearchFormButtonLabel}>Search</span>
+            <BiSearchAlt size={20} />
           </button>
 
           <input
@@ -54,7 +55,7 @@ class Searchbar extends Component {
             onChange={this.handleChange}
           />
         </form>
-        <ToastContainer position="top-right" closeOnClick />
+        <ToastContainer autoClose={3000} closeOnClick />
       </header>
     );
   }
