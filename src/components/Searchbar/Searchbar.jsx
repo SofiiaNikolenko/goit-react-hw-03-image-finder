@@ -3,6 +3,7 @@ import css from './Searchbar.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BiSearchAlt } from 'react-icons/bi';
+import PropTypes from 'prop-types';
 
 class Searchbar extends Component {
   state = {
@@ -62,3 +63,7 @@ class Searchbar extends Component {
 }
 
 export default Searchbar;
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func,
+};
