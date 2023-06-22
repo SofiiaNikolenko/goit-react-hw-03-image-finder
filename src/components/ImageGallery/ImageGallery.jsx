@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './ImageGallery.module.css';
-import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
+import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
 
 class ImageGallery extends Component {
   render() {
@@ -12,6 +12,7 @@ class ImageGallery extends Component {
               key={item.id}
               webformatURL={item.webformatURL}
               alt={item.tags}
+              largeImageURL={item.largeImageURL}
             />
           ))}
         </ul>
